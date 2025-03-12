@@ -55,7 +55,7 @@ ThisBuild / githubWorkflowBuild :=
   Seq(
     WorkflowStep.Use(
       UseRef.Public("coursier", "setup-action", "v1"),
-      params = Map("apps" -> "scalafmt:3.8.3")
+      params = Map("apps" -> "scalafmt:3.9.3")
     ),
     WorkflowStep.Sbt(List("validate"), name = Some("Build project")),
     WorkflowStep.Use(
